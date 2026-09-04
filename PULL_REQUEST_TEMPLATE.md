@@ -14,11 +14,14 @@
 
 ## AI assistance
 
-<!-- This project is an AI coding harness, so say how this change was produced. Pick one. -->
+<!-- Pick one. A commit made with AI carries the trailer `Assisted-by: <agent>:<model>`
+     (e.g. `Assisted-by: Claude:claude-fable-5-1`, the form the Linux kernel uses);
+     AI is never a co-author and never signs off. The person who merges answers for
+     every line. -->
 
-- [ ] Written by a person; AI was not used, or only for lookups
-- [ ] Written with AI assistance; a person reviewed the whole diff
-- [ ] Written by an agent; a person reviewed the whole diff before opening this PR
+- [ ] No AI, or AI only for lookups
+- [ ] AI-assisted: commits carry `Assisted-by:`; I reviewed every line
+- [ ] Agent-written: commits carry `Assisted-by:`; a person reviews every line before merge
 
 ## Checklist
 
