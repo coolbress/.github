@@ -1,32 +1,23 @@
-<!-- Title: Conventional Commits — type(scope): summary
-     Types: feat fix docs style refactor perf test build ci chore revert (breaking as needed).
-     The title is checked by CI, so there is no "type of change" section here. -->
+<!--
+Title: type(scope): summary. Types: feat fix docs style refactor perf test
+build ci chore revert (add ! for a breaking change). CI checks the title.
 
-## What and why
+Everything below this comment becomes the body of the squash commit on main,
+so write it as one. First, what changed and why (reference an issue with
+`Closes #N` when there is one). Then, how it was verified: what you ran and
+what it showed; for a bug fix, the test that reproduces the bug before the fix.
+Prose, no headings, no checkboxes.
 
-<!-- Lead with the conclusion: what changed and why it was needed.
-     Reference an issue with `Closes #N` when there is one. -->
+When AI wrote or assisted, end with the trailer as the last line:
 
-## How it was verified
+    Assisted-by: <agent>:<model>
 
-<!-- What you ran and what it showed. For a bug fix, add the test that reproduces
-     the bug before the fix. -->
+for example `Assisted-by: Claude:claude-fable-5-1` (the Linux kernel's form).
+AI is never a co-author and never signs off; the person who merges answers
+for every line. No trailer means no AI beyond lookups.
 
-## AI assistance
-
-<!-- Pick one. A commit made with AI carries the trailer `Assisted-by: <agent>:<model>`
-     (e.g. `Assisted-by: Claude:claude-fable-5-1`, the form the Linux kernel uses);
-     AI is never a co-author and never signs off. The person who merges answers for
-     every line. -->
-
-- [ ] No AI, or AI only for lookups
-- [ ] AI-assisted: commits carry `Assisted-by:`; I reviewed every line
-- [ ] Agent-written: commits carry `Assisted-by:`; a person reviews every line before merge
-
-## Checklist
-
-- [ ] All CI checks are green (the ruleset defines which — they are not listed here)
-- [ ] **Behaviour or a bug changed → a test that catches the change is in this PR, or the reason it is not**
-- [ ] Lockfile committed if dependencies changed
-- [ ] No secrets committed — configuration comes from the environment, `.env` is ignored
-- [ ] Public surface changed → README / CHANGELOG updated in the same PR
+Before marking ready: every check is green (the ruleset decides which); a
+behaviour or bug change has a test in this pull request, or the description
+says why not; the lockfile is committed when dependencies changed; nothing
+secret is committed; README and CHANGELOG follow a public-surface change.
+-->
