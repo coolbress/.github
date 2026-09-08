@@ -10,9 +10,15 @@ GitHub applies these automatically to a repository that does not carry its own c
 | `SECURITY.md` | how to report a vulnerability, what is in scope |
 | `CODE_OF_CONDUCT.md` | Contributor Covenant 3.0 |
 | `PULL_REQUEST_TEMPLATE.md` | what a pull request body contains |
-| `.github/ISSUE_TEMPLATE/` | bug and feature forms |
+| `.github/ISSUE_TEMPLATE/` | bug, feature and task forms, and `config.yml` |
 
 A repository that needs a different version adds its own file; that file wins.
+
+`.github/ISSUE_TEMPLATE/` is the exception, and the difference matters: GitHub
+replaces it **as a folder**, not file by file. A repository holding a single
+form of its own — or just a `config.yml` — stops inheriting this whole set,
+and the two are never merged. Take all of it or replace all of it.
+
 `LICENSE` is not inherited, so each repository ships its own. `CONTRIBUTING.md` is
 deliberately per repository too: build, test and PR-flow instructions differ, and a
 generic one would be a stub.
